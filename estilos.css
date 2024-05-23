@@ -1,28 +1,17 @@
-* {
-    box-sizing: border-box; /* Asegura que todos los elementos tengan un tamaño consistente */
-}
-
 body {
     font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
     padding: 20px;
-    margin: 0; /* Elimina el margen automático para evitar espacios extra */
-}
-
-/* Estilos base para pantallas pequeñas */
-body, form {
-    max-width: 90%; /* Ajusta el ancho máximo del cuerpo y el formulario al 90% del viewport */
-    margin: auto; /* Centra el contenido */
 }
 
 form {
     display: flex;   
-    flex-direction: column; /* Cambia la dirección de los elementos a columna */
     justify-content: center;
-    align-items: center; /* Centra los elementos horizontalmente */
+    align-self: center;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Agrega sombra para mejorar la apariencia */
 }
 
 label {
@@ -35,7 +24,6 @@ input[type="number"] {
     padding: 10px;
     margin-top: 5px;
     box-sizing: border-box;
-    margin-bottom: 20px; /* Añade un margen inferior para separar el campo del botón */
 }
 
 button {
@@ -45,7 +33,6 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
     margin-top: 20px;
 }
 
@@ -56,20 +43,25 @@ button:hover {
 #resultado {
     margin-top: 40px;
     font-weight: bold;
-    text-align: center; /* Centra el texto */
 }
 
-/* Media query para pantallas más grandes */
-@media (min-width: 768px) {
-    body, form {
-        max-width: 600px; /* Restaura el ancho máximo a 600px para pantallas más grandes */
+/* Media query para pantallas móviles */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reducir el padding para ajustarse mejor a pantallas pequeñas */
     }
 
-    label {
-        margin-top: 10px; /* Reduce el margen superior para pantallas más grandes */
+    form {
+        flex-direction: column; /* Cambiar la dirección de los elementos a columna para adaptarse mejor a pantallas pequeñas */
+        align-items: stretch; /* Alinear los elementos para llenar el ancho disponible */
     }
 
-    button {
-        width: auto; /* Permite que el botón tenga un ancho automático */
+    input[type="number"], button {
+        width: 100%; /* Hacer que los campos de entrada y el botón ocupen todo el ancho disponible */
+        margin-top: 10px; /* Aumentar el margen superior para dar más espacio entre los elementos */
+    }
+
+    #resultado {
+        margin-top: 20px; /* Reducir el margen superior para pantallas pequeñas */
     }
 }
