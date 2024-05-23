@@ -1,22 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     max-width: 600px;
     margin: auto;
     padding: 20px;
+    background-color: #f9f9f9; /* Añadir un fondo claro para mejorar la legibilidad */
 }
 
 form {
     display: flex;   
+    flex-direction: column; /* Cambiar a columna para un diseño más limpio */
     justify-content: center;
-    align-self: center;
-    background-color: #f9f9f9;
+    align-items: center; /* Centrar los elementos horizontalmente */
+    background-color: #ffffff; /* Fondo blanco para contraste */
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%; /* Limitar el ancho del formulario para un diseño más limpio */
+    margin: 0 auto; /* Centrar el formulario en el cuerpo */
 }
 
 label {
     display: block;
     margin-top: 15px;
+    font-weight: bold; /* Hacer los labels más prominentes */
 }
 
 input[type="number"] {
@@ -24,6 +34,9 @@ input[type="number"] {
     padding: 10px;
     margin-top: 5px;
     box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Añadir bordes claros para mejorar la visibilidad */
+    border-radius: 5px; /* Redondear los bordes de los campos de entrada */
 }
 
 button {
@@ -33,7 +46,9 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
     margin-top: 20px;
+    transition: background-color 0.3s ease; /* Animación suave al pasar el mouse */
 }
 
 button:hover {
@@ -43,25 +58,62 @@ button:hover {
 #resultado {
     margin-top: 40px;
     font-weight: bold;
+    text-align: center;
 }
 
-/* Media query para pantallas móviles */
+/* Estilos para pantallas pequeñas */
 @media (max-width: 480px) {
-    body {
-        padding: 10px; /* Reducir el padding para ajustarse mejor a pantallas pequeñas */
-    }
-
     form {
-        flex-direction: column; /* Cambiar la dirección de los elementos a columna para adaptarse mejor a pantallas pequeñas */
-        align-items: stretch; /* Alinear los elementos para llenar el ancho disponible */
+        padding: 10px;
     }
 
     input[type="number"], button {
-        width: 100%; /* Hacer que los campos de entrada y el botón ocupen todo el ancho disponible */
-        margin-top: 10px; /* Aumentar el margen superior para dar más espacio entre los elementos */
+        padding: 7px;
+    }
+
+    label {
+        font-size: 14px;
     }
 
     #resultado {
-        margin-top: 20px; /* Reducir el margen superior para pantallas pequeñas */
+        font-size: 16px;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 481px) and (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    input[type="number"], button {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    #resultado {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+    form {
+        padding: 20px;
+    }
+
+    input[type="number"], button {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    #resultado {
+        font-size: 20px;
     }
 }
