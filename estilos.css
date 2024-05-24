@@ -75,6 +75,7 @@ button:hover {
 
     input[type="number"], button {
         padding: 10px;
+        /* font-size: ; */
     }
 
     label {
@@ -112,11 +113,12 @@ button:hover {
     }
 
     input[type="number"], button {
-        padding: 40px;
+        padding: 35px;
+        font-size: 24px;
     }
 
     label {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     #resultado {
