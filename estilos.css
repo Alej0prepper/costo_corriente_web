@@ -7,48 +7,49 @@ body {
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    background-color: #f9f9f9; /* Añadir un fondo claro para mejorar la legibilidad */
+    background-color: #f9f9f9;
 }
 
 form {
     display: flex;   
-    flex-direction: column; /* Cambiar a columna para un diseño más limpio */
+    flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centrar los elementos horizontalmente */
-    background-color: #ffffff; /* Fondo blanco para contraste */
-    padding: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px; /* Aumentar el padding para dar más espacio interior */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 80%; /* Limitar el ancho del formulario para un diseño más limpio */
-    margin: 0 auto; /* Centrar el formulario en el cuerpo */
+    width: 80%;
+    margin: 0 auto;
 }
 
 label {
     display: block;
-    margin-top: 15px;
-    font-weight: bold; /* Hacer los labels más prominentes */
+    margin-top: 20px; /* Aumentar el margen superior para mayor separación */
+    font-weight: bold;
+    font-size: 18px; /* Aumentar el tamaño de la fuente de los labels */
 }
 
 input[type="number"] {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 15px; /* Aumentar el padding para una mejor interacción */
+    margin-top: 10px;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    border: 1px solid #ccc; /* Añadir bordes claros para mejorar la visibilidad */
-    border-radius: 5px; /* Redondear los bordes de los campos de entrada */
+    margin-bottom: 30px; /* Aumentar el margen inferior para separar el campo del botón */
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
     background-color: #007BFF;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px; /* Aumentar el padding para un botón más grande */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    margin-top: 20px;
-    transition: background-color 0.3s ease; /* Animación suave al pasar el mouse */
+    margin-top: 30px; /* Aumentar el margen superior para mayor separación */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -56,51 +57,14 @@ button:hover {
 }
 
 #resultado {
-    margin-top: 40px;
+    margin-top: 50px; /* Aumentar el margen superior para mayor separación */
     font-weight: bold;
     text-align: center;
+    font-size: 22px; /* Aumentar el tamaño de la fuente del resultado */
 }
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 480px) {
-    form {
-        padding: 10px;
-    }
-
-    input[type="number"], button {
-        padding: 7px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    #resultado {
-        font-size: 16px;
-    }
-}
-
-/* Estilos para pantallas medianas */
-@media (min-width: 481px) and (max-width: 768px) {
-    form {
-        padding: 15px;
-    }
-
-    input[type="number"], button {
-        padding: 10px;
-    }
-
-    label {
-        font-size: 16px;
-    }
-
-    #resultado {
-        font-size: 18px;
-    }
-}
-
-/* Estilos para pantallas grandes */
-@media (min-width: 769px) {
     form {
         padding: 20px;
     }
@@ -110,10 +74,48 @@ button:hover {
     }
 
     label {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #resultado {
         font-size: 20px;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 481px) and (max-width: 768px) {
+    form {
+        padding: 25px;
+    }
+
+    input[type="number"], button {
+        padding: 12px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    #resultado {
+        font-size: 22px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+    form {
+        padding: 30px;
+    }
+
+    input[type="number"], button {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    #resultado {
+        font-size: 24px;
     }
 }
