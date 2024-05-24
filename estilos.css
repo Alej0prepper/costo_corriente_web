@@ -108,18 +108,18 @@ button:hover {
 /* Estilos para pantallas grandes */
 @media (min-width: 769px) {
     form {
-        padding: 30px;
+        padding: 60px;
     }
 
     input[type="number"], button {
-        padding: 15px;
+        padding: 40px;
     }
 
     label {
-        font-size: 20px;
+        font-size: 40px;
     }
 
     #resultado {
-        font-size: 24px;
+        font-size: 30;
     }
 }
