@@ -1,8 +1,10 @@
 * {
     box-sizing: border-box;
+    /* width: 70%; */
 }
 
 body {
+
     font-family: Arial, sans-serif;
     max-width: 600px;
     margin: auto;
@@ -24,10 +26,12 @@ form {
 }
 
 label {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px; /* Aumentar el margen superior para mayor separación */
     font-weight: bold;
-    font-size: 18px; /* Aumentar el tamaño de la fuente de los labels */
+    font-size: 50px; /* Aumentar el tamaño de la fuente de los labels */
 }
 
 input[type="number"] {
@@ -66,7 +70,7 @@ button:hover {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 480px) {
     form {
-        padding: 20px;
+        padding: 50px;
     }
 
     input[type="number"], button {
@@ -74,30 +78,30 @@ button:hover {
     }
 
     label {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #resultado {
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
 /* Estilos para pantallas medianas */
 @media (min-width: 481px) and (max-width: 768px) {
     form {
-        padding: 25px;
+        padding: 50px;
     }
 
     input[type="number"], button {
-        padding: 12px;
+        padding: 20px;
     }
 
     label {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     #resultado {
-        font-size: 22px;
+        font-size: 30px;
     }
 }
 
